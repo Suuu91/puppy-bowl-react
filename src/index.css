@@ -1,0 +1,38 @@
+:root {
+  background-color: lightseagreen;
+}
+
+#mainsection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: xx-large;
+  font-family: monospace;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
+h1 {
+  text-align: center;
+  font-family: fantasy;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: x-large;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex; 
+  justify-content: center;
+}
