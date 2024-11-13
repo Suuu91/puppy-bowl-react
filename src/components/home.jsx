@@ -3,9 +3,9 @@ import { useState } from "react"
 const Home = () => {
   const [puppyName, setPuppyName] = useState(``)
   const [puppyBreed, setPuppyBreed] = useState(``)
-  const [puppyStatus, setPuppyStatus] = useState(``)
+  // const [puppyStatus, setPuppyStatus] = useState(``)
   const [puppyImage, setPuppyImage] = useState(``)
-  const [puppyTeamId, setPuppyTeamId] = useState(``)
+  // const [puppyTeamId, setPuppyTeamId] = useState(``)
 
   const submitform = async(event) => {
     event.preventDefault()
@@ -17,16 +17,16 @@ const Home = () => {
       body: JSON.stringify ({
         name: puppyName,
         breed:puppyBreed,
-        status: puppyStatus,
-        imageUrl: puppyImage,
-        teamId: puppyTeamId
+        imageUrl: puppyImage
       })
     })
+    const addedPuppy = await response.json()
+    console.log(addedPuppy)
     setPuppyName(``)
     setPuppyBreed(``)
-    setPuppyStatus(``)
+    // setPuppyStatus(``)
     setPuppyImage(``)
-    setPuppyTeamId(``)
+    // setPuppyTeamId(``)
   }
 
   return (
@@ -40,8 +40,7 @@ const Home = () => {
             placeholder="Puppy Name"
             onChange={(event) => {
               setPuppyName(event.target.value)
-              value = {puppyName}
-              console.log(puppyName)
+              console.log(event.target.value)
             }}
             value = {puppyName}
           />
@@ -54,33 +53,33 @@ const Home = () => {
             }}
             value = {puppyBreed}
           />
-           <input 
+           {/* <input 
             type = "text" 
             placeholder="Puppy Status"
             onChange={(event) => {
               setPuppyStatus(event.target.value)
-              console.log(puppyStatus)
+              // console.log(puppyStatus)
             }}
             value = {puppyStatus}
-          />
+          /> */}
           <input 
             type = "text" 
             placeholder="Puppy Image URL"
             onChange={(event) => {
               setPuppyImage(event.target.value)
-              console.log(puppyImage)
+              // console.log(puppyImage)
             }}
             value = {puppyImage}
           />
-          <input 
+          {/* <input 
             type = "number" 
             placeholder="Team ID"
             onChange={(event) => {
               setPuppyTeamId(event.target.value)
-              console.log(puppyTeamId)
+              // console.log(puppyTeamId)
             }}
             value = {puppyTeamId}
-          />
+          /> */}
           <button>Add</button>
         </form>
       </section>

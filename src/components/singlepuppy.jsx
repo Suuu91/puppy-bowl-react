@@ -26,7 +26,7 @@ const SinglePuppy = () => {
         "Content-Type":"application/json"
       }
     })
-    navigate("/home")
+    navigate("/")
   }
 
   return (
